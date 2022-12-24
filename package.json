@@ -1,0 +1,35 @@
+{
+  "name": "theater-organ-radio-bot",
+  "version": "2.0.0",
+  "description": "Discord bot for all things theater organ. Specifically designed around the Theater Organ radio run by the ATOS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BopItFreak/Theater-Organ-Radio-Bot.git"
+  },
+  "keywords": [
+    "organ",
+    "wurlitzer",
+    "atos",
+    "barton",
+    "kimball"
+  ],
+  "author": "August Berchelmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BopItFreak/Theater-Organ-Radio-Bot/issues"
+  },
+  "homepage": "https://github.com/BopItFreak/Theater-Organ-Radio-Bot#readme",
+  "dependencies": {
+    "@discordjs/voice": "^0.7.5",
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^14.7.1",
+    "node-fetch": "^2.6.7",
+    "pretty-ms": "^7.0.1",
+    "tweetnacl": "^1.0.3",
+    "typeof": "^1.0.0"
+  }
+}
