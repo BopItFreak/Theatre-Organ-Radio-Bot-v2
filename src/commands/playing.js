@@ -43,7 +43,7 @@ module.exports = {
               "text": `Requested by ${interaction.user.username}`
             },
             "thumbnail": {
-              "url": songListData.find((d) => d.album === songData.album).pictureUrl
+              "url": songListData.find((d) => d.album === songData.album)?.pictureUrl
             },
             "fields": [{
                 "name": "Title",

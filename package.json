@@ -24,9 +24,10 @@
   },
   "homepage": "https://github.com/BopItFreak/Theater-Organ-Radio-Bot#readme",
   "dependencies": {
-    "@discordjs/voice": "^0.7.5",
+    "@discordjs/voice": "^0.16.0",
     "cheerio": "^1.0.0-rc.10",
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.9.0",
+    "googleapis": "^118.0.0",
     "node-fetch": "^2.6.7",
     "pretty-ms": "^7.0.1",
     "tweetnacl": "^1.0.3",

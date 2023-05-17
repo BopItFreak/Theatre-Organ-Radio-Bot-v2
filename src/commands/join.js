@@ -1,4 +1,4 @@
-const { VoiceConnectionStatus, joinVoiceChannel, entersState } = require("@discordjs/voice");
+const { VoiceConnectionStatus, joinVoiceChannel, entersState, getVoiceConnection} = require("@discordjs/voice");
 
 module.exports = {
   name: "join",
@@ -7,13 +7,18 @@ module.exports = {
     let voiceChannel = interaction.member.voice.channel;
     let subscription;
     if (voiceChannel) {
+      let oldConnection = getVoiceConnection(interaction.guild.id);
+      if (oldConnection?.state?.status == 'ready' && (voiceChannel.id == oldConnection.joinConfig.channelId)) {
+        interaction.reply(`:x: I'm already in ${voiceChannel.toString()}`);
+        return;
+      }
       //join voice channel
       const connection = joinVoiceChannel({
         channelId: voiceChannel.id,
         guildId: voiceChannel.guild.id,
         adapterCreator: voiceChannel.guild.voiceAdapterCreator,
       });
-
+      
       //reply to interaction once connected
       connection.once(VoiceConnectionStatus.Ready, () => {
         subscription = connection.subscribe(organ.player);

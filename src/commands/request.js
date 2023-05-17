@@ -25,6 +25,7 @@ module.exports = {
         interaction.reply(`You have requested: \`${song.name}\`. ID: \`${song.id}\`.\n❌ \`\`${requestMessage}\`\` ❌`) 
       } else {
         interaction.reply(`You have requested: \`${song.name}\`. ID: \`${song.id}\`.\n✅ \`\`${requestMessage}\`\` ✅`);
+        organ.requestedSongs.push(interactionInput);
       }
     });
   }

@@ -10,6 +10,7 @@ module.exports = {
       interaction.reply(":x: I'm not in a voice channel.");
       return;
     }
+    connection.destroy();
     connection.disconnect();
     interaction.reply(":wave:");
   }

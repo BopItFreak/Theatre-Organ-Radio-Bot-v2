@@ -1,2 +1,6 @@
 node_modules/
 db/token.txt
+db/service_account.json
+db/drive_info.json
+recordings/
+package-lock.json

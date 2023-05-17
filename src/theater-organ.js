@@ -9,6 +9,7 @@ class TheaterOrgan {
     this.songListData = require("../db/radio-track-data.json");
     this.commands = [];
     this.lastSearchMessages = [];
+    this.requestedSongs = [];
     this.player = require("./audio.js");
     this.init();
   }
@@ -71,7 +72,7 @@ class TheaterOrgan {
     let lengthTemplate = "";
     for (let i = 0; i < (searchChunks[newPageNum].length >= 10 ? 10 : searchChunks[newPageNum].length); i++) {
       let result = searchChunks[newPageNum][i];
-      let name = truncate(result.name, 50, "…");
+      let name = truncate(result.name, 49, "…");
       searchTemplate = searchTemplate.concat(generateSearchTemplate(result.id, name));
       lengthTemplate = lengthTemplate.concat(generateShortSearchTemplate(result.songLength));
     }
